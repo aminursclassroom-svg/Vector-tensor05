@@ -1,0 +1,14 @@
+TENSOR MATH E-LIBRARY (5-FILE SETUP)
+====================================
+
+Files included:
+1. index.html  - Main Rokomari-style grid & PDF popup modal
+2. style.css   - Responsive styling & Full Screen layout
+3. books.js    - Book titles, writers, editions & Google Drive file IDs
+4. app.js      - Live cover thumbnails, search, popup reader & full screen toggle
+5. README.txt  - Setup & link verification guide
+
+How to verify PDF & Book Name match:
+- Open index.html in Chrome. Every card loads the actual first page of its Google Drive PDF as the cover thumbnail.
+- If any book's cover/PDF does not match its title, open books.js and swap the 'fileId' value for that book.
+- For Book #10 (Michael Spivak's Calculus), replace '1v56njLKIjBnvbx9m19otziV2I20RUFej' with the single PDF file ID and remove 'isFolder: true'.

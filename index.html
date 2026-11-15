@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TΞNSØR e-Library | Mathematics Book Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Navbar (Rokomari Style) -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="brand">
+        <span class="brand-badge">TΞNSØR</span>
+        <span class="brand-title">Math e-Library</span>
+      </div>
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by book name, writer, or edition..."
+          autocomplete="off"
+        />
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Book Showcase -->
+  <main class="container main-section">
+    <div class="section-header">
+      <div>
+        <h1>Academic Mathematics Collection</h1>
+        <p id="bookCount">Showing 10 books</p>
+      </div>
+    </div>
+
+    <div id="bookGrid" class="book-grid"></div>
+  </main>
+
+  <!-- Popup PDF Reader Modal -->
+  <div id="pdfModal" class="modal-overlay" aria-hidden="true">
+    <div id="modalDialog" class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-book-info">
+          <h2 id="modalTitle">Book Title</h2>
+          <p id="modalMeta">Writer • Edition</p>
+        </div>
+        <div class="modal-actions">
+          <button id="fullscreenBtn" class="btn-action btn-fullscreen" type="button">
+            ⛶ Full Screen
+          </button>
+          <button id="closeModalBtn" class="btn-action btn-close" type="button">
+            ✕ Close
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <!-- Blocks Google Drive top-right pop-out icon -->
+        <div class="popout-blocker" title="Protected View"></div>
+        <iframe
+          id="pdfViewer"
+          src=""
+          allow="fullscreen"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>TΞNSØR Digital Library • View-Only Academic Archive</p>
+  </footer>
+
+  <script src="books.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
