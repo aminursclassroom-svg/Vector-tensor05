@@ -4,7 +4,7 @@
 const BOOKS_DATA = [
   {
     id: 1,
-    title: "Calculus: Early Transcendentals",
+    title: "Integral Calculus",
     writer: "Howard Anton, Irl C. Bivens, Stephen Davis",
     edition: "10th Edition",
     fileId: "1A7RwvIraNC8BfYC2r4P1_cLaD_RxAka-" // Link 1
